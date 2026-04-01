@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Password Generator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>🔐 Password Generator</h2>
+
+    <!-- Output -->
+    <div class="output">
+        <input type="text" id="password" placeholder="Your password...">
+        <button id="toggleBtn">👁️</button>
+        <button id="copyBtn">📋</button>
+    </div>
+
+    <!-- Strength -->
+    <div class="strength">
+        <div id="strengthBar"></div>
+        <p id="strengthText">Strength</p>
+    </div>
+
+    <!-- Options -->
+    <div class="options">
+        <label>Password Length:
+            <input type="number" id="length" min="4" max="20" value="10">
+        </label>
+
+        <label><input type="checkbox" id="uppercase"> Uppercase</label>
+        <label><input type="checkbox" id="numbers"> Numbers</label>
+        <label><input type="checkbox" id="symbols"> Symbols</label>
+    </div>
+
+    <button id="generateBtn">Generate Password</button>
+
+    <!-- History -->
+    <div class="history">
+        <h3>📜 History</h3>
+        <ul id="historyList"></ul>
+    </div>
+</div>
+
+<!-- Toast -->
+<div id="toast">Copied!</div>
+
+<script src="script.js"></script>
+</body>
+</html>

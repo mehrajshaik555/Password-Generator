@@ -1,0 +1,105 @@
+/* Background */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(-45deg, #00c6ff, #0072ff, #7f00ff, #e100ff);
+    background-size: 400% 400%;
+    animation: bg 10s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Animation */
+@keyframes bg {
+    0% {background-position:0% 50%;}
+    50% {background-position:100% 50%;}
+    100% {background-position:0% 50%;}
+}
+
+/* Container */
+.container {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(15px);
+    padding: 25px;
+    border-radius: 15px;
+    width: 350px;
+    color: white;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+/* Output */
+.output {
+    display: flex;
+    gap: 5px;
+}
+
+.output input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+.output button {
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* Strength */
+.strength {
+    margin: 10px 0;
+}
+
+#strengthBar {
+    height: 6px;
+    background: red;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Buttons */
+#generateBtn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #ff00cc, #3333ff);
+    color: white;
+    cursor: pointer;
+}
+
+/* History */
+.history {
+    margin-top: 15px;
+}
+
+.history ul {
+    padding: 0;
+    list-style: none;
+}
+
+.history li {
+    background: rgba(255,255,255,0.2);
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+/* Toast */
+#toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: black;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: 0.5s;
+}
